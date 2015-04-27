@@ -1,0 +1,54 @@
+Project Explanation
+-----------------------------------------
+
+- In a P2P system, the actual challenge is determining how peers find each other on a network.
+- joining the network is not as straight
+forward as connecting to a well-known server to launch a client-server application.
+
+
+
+
+
+
+
+Solution to this problem?
+------------------------------------------
+1. Central discovery server approach – Most common and easy way is to use a central discovery
+server, which will provide a list of peers that are currently online. In order for this application
+work, the peers must contact the discovery server regularly and update the connectivity
+information. If no communication is received from a peer with in certain amount of time the
+peer is considered no longer active and the peer record is removed from the server.
+2. When a peer wants to contact another peer first it contacts the discovery server,
+which will provide a list of peers that are online.
+3. Reading a list of super peers from some location and trying to contact them directly.
+4. The connectivity information that you need depends on the way you are connecting with the
+peer. It typically includes information such as port number and IP address.
+5. When a peer leaves the network, an updates list is published to all the other peers they
+discontinue attempting to communicate with the peers who left.
+6. Other than this modification in your previous chat application where you need to change from
+client-server architecture to P2P, other specifications such as login, logout, creating chat
+rooms and GUI must have the same protocols as specified in the first project documentation.
+
+Solution:
+We have a central server for client connect to get all client in the P2P. Client want connect to server must login with user and pass
+after client will get all list client in p2p. When client logout it will send a message to server and server will send message to all client.
+after client get list client in p2p it will creat a listP2P to send message to all client in P2P and receive message from client in P2P so not without use server to chat.
+and. With each of client when login to P2P it will be get a ip and port for it that it will chat with other client in p2p
+class Client :
+---------------------------------------
+use client to login server and get list of client in the p2p. with Client i have list of P2P client in 
+with P2PClient, P2PList, 
+- P2PClient have private IP and Port that to chat with other Client without server
+- and P2PList to save all list Client in P2P
+- App Class, Chat class, ChatRoom class, Login class, is the same Chat room
+after Client login to server it will get all list Client in the P2P and save it in
+P2Plist, and when Client want send a message to other client it will get
+IP and Port in P2Plist and send message to it.
+------------------------------
+class server
+---------------
+The same class server in chat room but it don't have Chat it only check login
+send List client, and send statue of client when client offline
+
+
+---------

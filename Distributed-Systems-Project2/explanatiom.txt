@@ -1,0 +1,19 @@
+i must have a server centrel
+to all client connect and get all client online in the P2P
+with each of client want connect to P2P
+the first it must connect to server centre
+after i will get all client in the P2P 
+
+. connect to server to get all
+client in the P2P (join theroom)
+. afterthey will connect with each
+each of them like:
+and they can send message 
+without server centre
+
+do you understand?
+yes
+
+which u explained me above is called what? is that the architecture?
+where?
+
